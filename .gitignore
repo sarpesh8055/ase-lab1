@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+logs/*.jsonl.tmp
+
+# generated, not submitted
+task4_tools/workspace/
+task2_own_agent/.cache/
+task3_rag/.cache/

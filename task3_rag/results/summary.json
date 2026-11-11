@@ -1,0 +1,315 @@
+{
+  "metrics": {
+    "R2_fixed128": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.5791666666666667,
+        "context_precision": 0.4731944444444444
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 0.6333333333333333,
+          "context_precision": 0.55
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.016666666666666666,
+          "context_precision": 0.016666666666666666
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.8333333333333334,
+          "context_precision": 0.7
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 0.8333333333333334,
+          "context_precision": 0.6261111111111111
+        }
+      },
+      "missing_ids": []
+    },
+    "R3_rec64": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.6166666666666667,
+        "context_precision": 0.5186111111111111
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 0.6,
+          "context_precision": 0.5361111111111111
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.03333333333333333,
+          "context_precision": 0.041666666666666664
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.8333333333333334,
+          "context_precision": 0.7105555555555555
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 1.0,
+          "context_precision": 0.7861111111111111
+        }
+      },
+      "missing_ids": []
+    },
+    "R3_rec128": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.5833333333333334,
+        "context_precision": 0.4936111111111111
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 0.6,
+          "context_precision": 0.49444444444444446
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.03333333333333333,
+          "context_precision": 0.05
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.9,
+          "context_precision": 0.7355555555555555
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 0.8,
+          "context_precision": 0.6944444444444444
+        }
+      },
+      "missing_ids": []
+    },
+    "R3_rec256": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.575,
+        "context_precision": 0.4789583333333333
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 0.6,
+          "context_precision": 0.5166666666666667
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.03333333333333333,
+          "context_precision": 0.015000000000000001
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.9333333333333333,
+          "context_precision": 0.7219444444444444
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 0.7333333333333333,
+          "context_precision": 0.6622222222222223
+        }
+      },
+      "missing_ids": []
+    },
+    "R1_bm25": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.6416666666666667,
+        "context_precision": 0.6227777777777778
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 1.0,
+          "context_precision": 0.7872222222222223
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.5,
+          "context_precision": 0.8305555555555556
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.36666666666666664,
+          "context_precision": 0.225
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 0.7,
+          "context_precision": 0.6483333333333333
+        }
+      },
+      "missing_ids": []
+    },
+    "R4_hybrid": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.7083333333333334,
+        "context_precision": 0.6719444444444445
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 0.9,
+          "context_precision": 0.7444444444444444
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.5,
+          "context_precision": 0.7872222222222223
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.6666666666666666,
+          "context_precision": 0.48833333333333334
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 0.7666666666666667,
+          "context_precision": 0.6677777777777778
+        }
+      },
+      "missing_ids": []
+    },
+    "R5_hybrid_hyde": {
+      "k": 5,
+      "overall": {
+        "n": 120,
+        "context_recall": 0.7333333333333333,
+        "context_precision": 0.6995833333333333
+      },
+      "per_category": {
+        "identifier": {
+          "n": 30,
+          "context_recall": 1.0,
+          "context_precision": 0.7855555555555556
+        },
+        "multi-hop": {
+          "n": 30,
+          "context_recall": 0.5,
+          "context_precision": 0.815
+        },
+        "paraphrase": {
+          "n": 30,
+          "context_recall": 0.6666666666666666,
+          "context_precision": 0.53
+        },
+        "version": {
+          "n": 30,
+          "context_recall": 0.7666666666666667,
+          "context_precision": 0.6677777777777778
+        }
+      },
+      "missing_ids": []
+    }
+  },
+  "stats": {
+    "R2_fixed128": {
+      "n_chunks": 1327,
+      "avg_chunk_tokens": 117.0,
+      "dense": true,
+      "chunking_s": 0.3,
+      "bm25_build_s": 0.0,
+      "embedding_s": 29.4,
+      "latency_ms_median": 177.0,
+      "latency_ms_p95": 1506.5,
+      "retrieval_llm_tokens_per_query": 0,
+      "embedded_tokens_per_query": 18.0,
+      "context_tokens_top5": 603.0
+    },
+    "R3_rec64": {
+      "n_chunks": 3444,
+      "avg_chunk_tokens": 57.0,
+      "dense": true,
+      "chunking_s": 1.36,
+      "bm25_build_s": 0.0,
+      "embedding_s": 59.7,
+      "latency_ms_median": 181.3,
+      "latency_ms_p95": 1504.3,
+      "retrieval_llm_tokens_per_query": 0,
+      "embedded_tokens_per_query": 18.0,
+      "context_tokens_top5": 290.0
+    },
+    "R3_rec128": {
+      "n_chunks": 1594,
+      "avg_chunk_tokens": 94.0,
+      "dense": true,
+      "chunking_s": 0.82,
+      "bm25_build_s": 0.0,
+      "embedding_s": 42.9,
+      "latency_ms_median": 177.5,
+      "latency_ms_p95": 1506.0,
+      "retrieval_llm_tokens_per_query": 0,
+      "embedded_tokens_per_query": 18.0,
+      "context_tokens_top5": 436.0
+    },
+    "R3_rec256": {
+      "n_chunks": 968,
+      "avg_chunk_tokens": 141.0,
+      "dense": true,
+      "chunking_s": 0.34,
+      "bm25_build_s": 0.0,
+      "embedding_s": 19.1,
+      "latency_ms_median": 174.0,
+      "latency_ms_p95": 1506.8,
+      "retrieval_llm_tokens_per_query": 0,
+      "embedded_tokens_per_query": 18.0,
+      "context_tokens_top5": 710.0
+    },
+    "R1_bm25": {
+      "n_chunks": 1594,
+      "avg_chunk_tokens": 94.0,
+      "dense": false,
+      "chunking_s": 0,
+      "bm25_build_s": 0.39,
+      "embedding_s": 0.0,
+      "latency_ms_median": 15.6,
+      "latency_ms_p95": 19.0,
+      "retrieval_llm_tokens_per_query": 0,
+      "embedded_tokens_per_query": 0,
+      "context_tokens_top5": 463.0
+    },
+    "R4_hybrid": {
+      "n_chunks": 1594,
+      "avg_chunk_tokens": 94.0,
+      "dense": true,
+      "chunking_s": 0,
+      "bm25_build_s": 0.39,
+      "embedding_s": 42.9,
+      "latency_ms_median": 177.0,
+      "latency_ms_p95": 1507.5,
+      "retrieval_llm_tokens_per_query": 0,
+      "embedded_tokens_per_query": 18.0,
+      "context_tokens_top5": 466.0
+    },
+    "R5_hybrid_hyde": {
+      "n_chunks": 1594,
+      "avg_chunk_tokens": 94.0,
+      "dense": true,
+      "chunking_s": 0,
+      "bm25_build_s": 0.39,
+      "embedding_s": 42.9,
+      "hyde_tokens": 54.76,
+      "latency_ms_median": 1783.4,
+      "latency_ms_p95": 3114.1,
+      "retrieval_llm_tokens_per_query": 152.0,
+      "embedded_tokens_per_query": 73.0,
+      "context_tokens_top5": 476.0
+    }
+  }
+}

@@ -1,0 +1,932 @@
+{
+ "size64 plain    dense": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6166666666666667,
+   "context_precision": 0.5186111111111111
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.6,
+    "context_precision": 0.5361111111111111
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.03333333333333333,
+    "context_precision": 0.041666666666666664
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.7105555555555555
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7861111111111111
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 plain    hybrid w=0.3": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7,
+   "context_precision": 0.61
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.6927777777777778
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8194444444444444
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.4666666666666667,
+    "context_precision": 0.27055555555555555
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6572222222222222
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 plain    hybrid w=0.4": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7083333333333334,
+   "context_precision": 0.6011111111111112
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.6872222222222223
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.4666666666666667,
+    "context_precision": 0.7011111111111111
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5333333333333333,
+    "context_precision": 0.35333333333333333
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6627777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 plain    hybrid w=0.5": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7041666666666667,
+   "context_precision": 0.6068055555555555
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.6927777777777778
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.4166666666666667,
+    "context_precision": 0.6483333333333333
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5666666666666667,
+    "context_precision": 0.4233333333333333
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6627777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 plain    hybrid w=0.6": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6666666666666666,
+   "context_precision": 0.5990277777777777
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.8,
+    "context_precision": 0.6066666666666667
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.4,
+    "context_precision": 0.6333333333333333
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6333333333333333,
+    "context_precision": 0.5133333333333333
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6427777777777777
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 instruct dense": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6333333333333333,
+   "context_precision": 0.5502777777777778
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.6511111111111112
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.0,
+    "context_precision": 0.0
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.8,
+    "context_precision": 0.6166666666666667
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.9333333333333333
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 instruct hybrid w=0.3": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7,
+   "context_precision": 0.6194444444444444
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7205555555555556
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.4666666666666667,
+    "context_precision": 0.2594444444444444
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6672222222222222
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 instruct hybrid w=0.4": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7166666666666667,
+   "context_precision": 0.626875
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7372222222222222
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5333333333333333,
+    "context_precision": 0.2825
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6572222222222222
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 instruct hybrid w=0.5": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.725,
+   "context_precision": 0.645625
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.9666666666666667,
+    "context_precision": 0.763888888888889
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5666666666666667,
+    "context_precision": 0.3352777777777778
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8666666666666667,
+    "context_precision": 0.6527777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size64 instruct hybrid w=0.6": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7666666666666667,
+   "context_precision": 0.6627777777777778
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.9666666666666667,
+    "context_precision": 0.736111111111111
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.825
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6333333333333333,
+    "context_precision": 0.4233333333333333
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.9666666666666667,
+    "context_precision": 0.6666666666666666
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 plain    dense": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.5833333333333334,
+   "context_precision": 0.4936111111111111
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.6,
+    "context_precision": 0.49444444444444446
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.03333333333333333,
+    "context_precision": 0.05
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.9,
+    "context_precision": 0.7355555555555555
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8,
+    "context_precision": 0.6944444444444444
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 plain    hybrid w=0.3": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.675,
+   "context_precision": 0.6491666666666667
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.9666666666666667,
+    "context_precision": 0.7805555555555556
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.4666666666666667,
+    "context_precision": 0.3527777777777778
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7666666666666667,
+    "context_precision": 0.6633333333333333
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 plain    hybrid w=0.4": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6833333333333333,
+   "context_precision": 0.6533333333333334
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.9666666666666667,
+    "context_precision": 0.763888888888889
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.7944444444444444
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.3888888888888889
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7666666666666667,
+    "context_precision": 0.6661111111111111
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 plain    hybrid w=0.5": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7083333333333334,
+   "context_precision": 0.6719444444444445
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.9,
+    "context_precision": 0.7444444444444444
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.7872222222222223
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6666666666666666,
+    "context_precision": 0.48833333333333334
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7666666666666667,
+    "context_precision": 0.6677777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 plain    hybrid w=0.6": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6666666666666666,
+   "context_precision": 0.6233333333333333
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.8,
+    "context_precision": 0.7055555555555556
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.43333333333333335,
+    "context_precision": 0.5577777777777778
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6666666666666666,
+    "context_precision": 0.5622222222222223
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7666666666666667,
+    "context_precision": 0.6677777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 instruct dense": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6125,
+   "context_precision": 0.5088888888888888
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.6333333333333333
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.016666666666666666,
+    "context_precision": 0.006666666666666667
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.9,
+    "context_precision": 0.7122222222222222
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6833333333333333
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 instruct hybrid w=0.3": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6916666666666667,
+   "context_precision": 0.6529166666666666
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7872222222222223
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.3288888888888889
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7666666666666667,
+    "context_precision": 0.6649999999999999
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 instruct hybrid w=0.4": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7083333333333334,
+   "context_precision": 0.66125
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7705555555555555
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5666666666666667,
+    "context_precision": 0.3761111111111111
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7666666666666667,
+    "context_precision": 0.6677777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 instruct hybrid w=0.5": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7416666666666667,
+   "context_precision": 0.6856944444444444
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7538888888888889
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6333333333333333,
+    "context_precision": 0.4855555555555556
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6727777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size128 instruct hybrid w=0.6": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7291666666666666,
+   "context_precision": 0.700625
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.9666666666666667,
+    "context_precision": 0.7344444444444445
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.48333333333333334,
+    "context_precision": 0.8122222222222223
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6333333333333333,
+    "context_precision": 0.5830555555555555
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.8333333333333334,
+    "context_precision": 0.6727777777777778
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 plain    dense": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.575,
+   "context_precision": 0.4789583333333333
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.6,
+    "context_precision": 0.5166666666666667
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.03333333333333333,
+    "context_precision": 0.015000000000000001
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.9333333333333333,
+    "context_precision": 0.7219444444444444
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.6622222222222223
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 plain    hybrid w=0.3": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6916666666666667,
+   "context_precision": 0.6786111111111112
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7899999999999999
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5666666666666667,
+    "context_precision": 0.4455555555555556
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.6483333333333333
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 plain    hybrid w=0.4": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7166666666666667,
+   "context_precision": 0.6861111111111111
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7899999999999999
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6333333333333333,
+    "context_precision": 0.4788888888888889
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.645
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 plain    hybrid w=0.5": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7166666666666667,
+   "context_precision": 0.7021527777777778
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.8205555555555556
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6666666666666666,
+    "context_precision": 0.5175
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.64
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 plain    hybrid w=0.6": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.725,
+   "context_precision": 0.7126388888888889
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.8205555555555556
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.5594444444444445
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.64
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 instruct dense": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.5958333333333333,
+   "context_precision": 0.50375
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.6916666666666667
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.016666666666666666,
+    "context_precision": 0.006666666666666667
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.9,
+    "context_precision": 0.6727777777777778
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.6438888888888888
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 instruct hybrid w=0.3": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.6916666666666667,
+   "context_precision": 0.6677083333333333
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.7788888888888889
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.5666666666666667,
+    "context_precision": 0.4130555555555555
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.6483333333333333
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 instruct hybrid w=0.4": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7,
+   "context_precision": 0.6868055555555556
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.8122222222222223
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6,
+    "context_precision": 0.4661111111111111
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7,
+    "context_precision": 0.6383333333333333
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 instruct hybrid w=0.5": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.7166666666666667,
+   "context_precision": 0.7010416666666667
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.8177777777777778
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.8305555555555556
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6333333333333333,
+    "context_precision": 0.5091666666666667
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.6466666666666666
+   }
+  },
+  "missing_ids": []
+ },
+ "size256 instruct hybrid w=0.6": {
+  "k": 5,
+  "overall": {
+   "n": 120,
+   "context_recall": 0.725,
+   "context_precision": 0.7177777777777778
+  },
+  "per_category": {
+   "identifier": {
+    "n": 30,
+    "context_recall": 1.0,
+    "context_precision": 0.8261111111111111
+   },
+   "multi-hop": {
+    "n": 30,
+    "context_recall": 0.5,
+    "context_precision": 0.825
+   },
+   "paraphrase": {
+    "n": 30,
+    "context_recall": 0.6666666666666666,
+    "context_precision": 0.5788888888888889
+   },
+   "version": {
+    "n": 30,
+    "context_recall": 0.7333333333333333,
+    "context_precision": 0.6411111111111112
+   }
+  },
+  "missing_ids": []
+ }
+}
