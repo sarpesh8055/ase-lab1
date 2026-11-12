@@ -132,6 +132,7 @@ and cost. We add events with `llm.log_event`: `start`, `model_call` (step, numbe
 |---|---|---|---|---|---|---|
 | run_01 (no feedback) | 11 | 8 | 25/25 at the first write | 19 | 42,680 + 12,922 | $0.0081 |
 | run_02 (1 feedback round) | 14 | 9 | 25/25, still 25/25 after feedback | 23 | 69,560 + 8,656 | $0.0068 |
+| run_03 (all five members, 1 feedback round; produced `site/index.html`) | 14 | 9 | 25/25 at the first write, still 25/25 after feedback | 28 | 95,862 + 10,915 | $0.0086 |
 
 (Calls include the embedding calls for the queries.)
 
@@ -142,6 +143,9 @@ and cost. We add events with `llm.log_event`: `start`, `model_call` (step, numbe
 - The agent decides itself what to search for. If it never asks about a topic, it doesn't know the rule.
   In run_02 the feedback asked for a statistics section, and the agent added it without searching the
   matching document (SG-62).
+  In run_03 the first page passed 25/25 although it had no bio (SG-08) and its hot-take badges did not start
+  with 🔥 (SG-31): the checker only tests that a badge exists, and the agent had not searched for these two rules.
+  It fixed both after the feedback told it to look up the rules for member cards and badges (steps 11–13).
 - Pure dense retrieval: exact-term queries (e.g. a document id like "SG-40") are not matched better than
   paraphrases. A BM25 component would help (see Task 3).
 - Deprecated and active versions of a rule are very similar, so both are retrieved. We rely on the status line
