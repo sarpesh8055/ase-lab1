@@ -134,8 +134,8 @@ and cost. We add events with `llm.log_event`: `start`, `model_call` (step, numbe
 | run_02 (1 feedback round) | 14 | 9 | 25/25, still 25/25 after feedback | 23 | 69,560 + 8,656 | $0.0068 |
 | run_03 (all five members, 1 feedback round; produced `site/index.html`) | 14 | 9 | 25/25 at the first write, still 25/25 after feedback | 28 | 95,862 + 10,915 | $0.0086 |
 
-(Calls include the embedding calls for the queries. run_03 was run on another machine without the embedding
-cache, so its 28 calls also include the 5 batches that embedded the 66 chunks of the index.)
+(Calls include the embedding calls for the queries. run_03 started without an embedding cache, so its
+28 calls also include the 5 batches that embedded the 66 chunks of the index.)
 
 ## Known limitations
 

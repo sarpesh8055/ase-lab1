@@ -40,5 +40,6 @@ python embed_images.py src/index.html --images content/images --out site/index.h
 python check_site.py site/index.html --content content
 ```
 
-If the embed script ends with a `UnicodeEncodeError` on a Windows console, the file has still been written;
-it is only the script's last print that fails. `set PYTHONIOENCODING=utf-8` avoids the message.
+If the output of the embed script goes through a pipe or Git Bash, it can end with a `UnicodeEncodeError`.
+The file has still been written; only the script's last print fails. To avoid the message, set the output
+encoding first: in cmd `set PYTHONIOENCODING=utf-8`, in PowerShell `$env:PYTHONIOENCODING="utf-8"`.

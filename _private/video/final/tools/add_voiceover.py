@@ -58,7 +58,7 @@ def main() -> None:
     candidates = sorted((FINAL / "out").glob("*_NO_VOICE.mp4"), key=lambda p: p.stat().st_mtime)
     if not a.video and not candidates:
         raise SystemExit("No silent video found in out/. Build it first (tools/build_video.py), or get it back with: "
-                         "git restore _private/video/final/out")
+                         "git restore :/_private/video/final/out")
     silent = Path(a.video) if a.video else candidates[-1]
     draft = silent.name.startswith("DRAFT_")
     out = Path(a.out) if a.out else FINAL / "out" / f"{'DRAFT_' if draft else ''}{cfg['file_prefix']}_lab1_video.mp4"
