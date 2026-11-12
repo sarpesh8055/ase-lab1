@@ -1,0 +1,1 @@
+Create a Python script hello.py that prints "Hello from our agent!" and run it.

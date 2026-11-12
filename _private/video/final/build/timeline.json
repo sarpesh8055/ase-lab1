@@ -1,0 +1,269 @@
+{
+ "total_seconds": 582.1,
+ "parts": [
+  {
+   "part": 1,
+   "name": "Intro",
+   "speaker": "Namit",
+   "start": 0.0,
+   "end": 22.4
+  },
+  {
+   "part": 2,
+   "name": "Task 1: using an agent",
+   "speaker": "Namit",
+   "start": 22.4,
+   "end": 122.5
+  },
+  {
+   "part": 3,
+   "name": "Task 2: our own agent",
+   "speaker": "Gagan",
+   "start": 122.5,
+   "end": 251.5
+  },
+  {
+   "part": 4,
+   "name": "Task 3: RAG",
+   "speaker": "Ranjith",
+   "start": 251.5,
+   "end": 363.9
+  },
+  {
+   "part": 5,
+   "name": "Task 4: tools",
+   "speaker": "Sarpesh",
+   "start": 363.9,
+   "end": 524.5
+  },
+  {
+   "part": 6,
+   "name": "Wrap-up",
+   "speaker": "Soumya",
+   "start": 524.5,
+   "end": 582.1
+  }
+ ],
+ "slides": [
+  {
+   "id": "s01",
+   "n": 1,
+   "part": 1,
+   "start": 0.0,
+   "end": 22.4,
+   "seconds": 22.4,
+   "words": 51,
+   "speaker": "Namit",
+   "title": "Title, members, website"
+  },
+  {
+   "id": "s02",
+   "n": 2,
+   "part": 2,
+   "start": 22.4,
+   "end": 44.0,
+   "seconds": 21.6,
+   "words": 49,
+   "speaker": "Namit",
+   "title": "The website: desktop, phone, day, night"
+  },
+  {
+   "id": "s03",
+   "n": 3,
+   "part": 2,
+   "start": 44.0,
+   "end": 68.9,
+   "seconds": 24.9,
+   "words": 57,
+   "speaker": "Namit",
+   "title": "Session statistics"
+  },
+  {
+   "id": "s04",
+   "n": 4,
+   "part": 2,
+   "start": 68.9,
+   "end": 91.3,
+   "seconds": 22.4,
+   "words": 51,
+   "speaker": "Namit",
+   "title": "What it did on its own, and when it asked"
+  },
+  {
+   "id": "s05",
+   "n": 5,
+   "part": 2,
+   "start": 91.3,
+   "end": 122.5,
+   "seconds": 31.2,
+   "words": 72,
+   "speaker": "Namit",
+   "title": "Where it went wrong"
+  },
+  {
+   "id": "s06",
+   "n": 6,
+   "part": 3,
+   "start": 122.5,
+   "end": 155.0,
+   "seconds": 32.5,
+   "words": 75,
+   "speaker": "Gagan",
+   "title": "Diagram: loop, actions, RAG, checker, feedback"
+  },
+  {
+   "id": "s07",
+   "n": 7,
+   "part": 3,
+   "start": 155.0,
+   "end": 184.9,
+   "seconds": 29.9,
+   "words": 69,
+   "speaker": "Gagan",
+   "title": "One annotated step"
+  },
+  {
+   "id": "s08",
+   "n": 8,
+   "part": 3,
+   "start": 184.9,
+   "end": 217.8,
+   "seconds": 32.9,
+   "words": 76,
+   "speaker": "Gagan",
+   "title": "Chunking, k, and safety nets"
+  },
+  {
+   "id": "s09",
+   "n": 9,
+   "part": 3,
+   "start": 217.8,
+   "end": 251.5,
+   "seconds": 33.7,
+   "words": 78,
+   "speaker": "Gagan",
+   "title": "Result, context growth, rules it got wrong"
+  },
+  {
+   "id": "s10",
+   "n": 10,
+   "part": 4,
+   "start": 251.5,
+   "end": 286.5,
+   "seconds": 35.0,
+   "words": 81,
+   "speaker": "Ranjith",
+   "title": "Table: setups by question category"
+  },
+  {
+   "id": "s11",
+   "n": 11,
+   "part": 4,
+   "start": 286.5,
+   "end": 309.4,
+   "seconds": 22.9,
+   "words": 52,
+   "speaker": "Ranjith",
+   "title": "Chunk size, weight, cost and latency"
+  },
+  {
+   "id": "s12",
+   "n": 12,
+   "part": 4,
+   "start": 309.4,
+   "end": 336.0,
+   "seconds": 26.6,
+   "words": 61,
+   "speaker": "Ranjith",
+   "title": "End to end, and the judge"
+  },
+  {
+   "id": "s13",
+   "n": 13,
+   "part": 4,
+   "start": 336.0,
+   "end": 363.9,
+   "seconds": 27.9,
+   "words": 64,
+   "speaker": "Ranjith",
+   "title": "Failure analysis and recommendation"
+  },
+  {
+   "id": "s14",
+   "n": 14,
+   "part": 5,
+   "start": 363.9,
+   "end": 395.5,
+   "seconds": 31.6,
+   "words": 73,
+   "speaker": "Sarpesh",
+   "title": "The tools: read-only, execute, write"
+  },
+  {
+   "id": "s15",
+   "n": 15,
+   "part": 5,
+   "start": 395.5,
+   "end": 426.3,
+   "seconds": 30.8,
+   "words": 71,
+   "speaker": "Sarpesh",
+   "title": "Why we validate, and the mock run"
+  },
+  {
+   "id": "s16",
+   "n": 16,
+   "part": 5,
+   "start": 426.3,
+   "end": 454.6,
+   "seconds": 28.3,
+   "words": 65,
+   "speaker": "Sarpesh",
+   "title": "Threat, control, where in the code"
+  },
+  {
+   "id": "s17",
+   "n": 17,
+   "part": 5,
+   "start": 454.6,
+   "end": 485.8,
+   "seconds": 31.2,
+   "words": 72,
+   "speaker": "Sarpesh",
+   "title": "Condensed trace of one bug fix"
+  },
+  {
+   "id": "s18",
+   "n": 18,
+   "part": 5,
+   "start": 485.8,
+   "end": 524.5,
+   "seconds": 38.7,
+   "words": 90,
+   "speaker": "Sarpesh",
+   "title": "Untrusted content and limits"
+  },
+  {
+   "id": "s19",
+   "n": 19,
+   "part": 6,
+   "start": 524.5,
+   "end": 546.1,
+   "seconds": 21.6,
+   "words": 49,
+   "speaker": "Soumya",
+   "title": "Lessons learned"
+  },
+  {
+   "id": "s20",
+   "n": 20,
+   "part": 6,
+   "start": 546.1,
+   "end": 582.1,
+   "seconds": 36.0,
+   "words": 67,
+   "speaker": "Soumya",
+   "title": "AI usage statement, who did what"
+  }
+ ]
+}

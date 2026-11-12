@@ -1,0 +1,9 @@
+Much better, but two things.
+
+1. You wrote "Removed lazy loading from the embedded portraits", but it is still there: all five <img> tags in site/index.html still say loading="lazy". Your patch failed on those lines, so you added a line of JavaScript that removes the attribute at runtime instead, and your check searched for loading=lazy without the quotes, so it found nothing. Please don't report something as done when your check can't see it.
+
+The cause is that you are editing a file with 600 KB of base64 in it, so grep and your patches break on the picture lines. Fix the cause: keep an editable source with {{image:<file name>}} placeholders in src/index.html, make all changes there, and generate site/index.html from it with embed_images.py and its --out option. Then really remove loading="lazy" from the markup and delete the JavaScript workaround.
+
+2. With three cards in a row the cards are narrow, and "AI in software engineering today" and "Software engineering in 5-10 years" sit side by side in two very thin columns that are hard to read. Stack them so each one uses the full width of the card.
+
+Run the checker again when you are done, and tell us exactly what you verified and how.

@@ -1,0 +1,16 @@
+Our team website needs a proper rebuild. The current site/index.html only shows one of us and it is too tame.
+
+Build the team website for all five of us as ONE standalone file: site/index.html.
+
+Content
+- Read every profile in content/*.md (ignore _template.md). Each of the five members gets a card with their picture and everything from their profile: study background, interests, fun fact, opinion on AI today, where software engineering will be in 5-10 years, and their hot take. Use our own words and don't invent facts about us.
+- Add a section with our team's shared view on AI and the future of software engineering. Read the five opinions, work out what we agree on and where we differ, and write that up as what the team thinks.
+- Make the page funny and creative. We are five master's students in a course about coding agents, and this page is built by one. Jokes in headings and labels and small interactive touches are welcome.
+
+Technical requirements
+- HTML + CSS + JavaScript only, all inside the one file. Nothing loaded from the internet: no CDNs, no web fonts, no external images.
+- Responsive: it must work on a phone and on a desktop.
+- A day/night mode toggle.
+- Everyone's picture embedded in the file. The pictures are in content/images/. Don't write base64 yourself: look at embed_images.py, it does that for you.
+- When you are done, run: python check_site.py site/index.html --content content
+  and fix whatever it reports until every check passes.

@@ -1,0 +1,93 @@
+{
+ "session": "ses_e307f3900ffeITomnx46hlZkPo",
+ "title": "Rebuilding standalone team website for five members",
+ "model": {
+  "id": "openai.gpt-6-luna",
+  "providerID": "upb"
+ },
+ "total": {
+  "model_calls": 81,
+  "tool_calls": 103,
+  "tool_errors": 7,
+  "input": 70952,
+  "cache_read": 4036054,
+  "output": 22824,
+  "reasoning": 22146,
+  "cost": 0.06994,
+  "prompts": 4,
+  "minutes": 22.4,
+  "context_first_call": 11015,
+  "context_last_call": 70712,
+  "opencode_session_cost": 0.06994073999999996
+ },
+ "per_prompt": [
+  {
+   "prompt": 1,
+   "first_line": "Our team website needs a proper rebuild. The current site/index.html only shows one of us and it is too tame.",
+   "chars": 1474,
+   "model_calls": 16,
+   "tool_calls": 25,
+   "tool_errors": 0,
+   "input": 33528,
+   "cache_read": 396924,
+   "output": 8171,
+   "reasoning": 1069,
+   "cost": 0.01194,
+   "context_at_end": 33483,
+   "started": 1794482685709,
+   "ended": 1794482833185,
+   "seconds": 147
+  },
+  {
+   "prompt": 2,
+   "first_line": "Thanks. The checker is happy and the content is right. But we opened the page on a laptop and on a phone, and ",
+   "chars": 1338,
+   "model_calls": 29,
+   "tool_calls": 33,
+   "tool_errors": 4,
+   "input": 22655,
+   "cache_read": 1406500,
+   "output": 7783,
+   "reasoning": 16083,
+   "cost": 0.02826,
+   "context_at_end": 56051,
+   "started": 1794482976603,
+   "ended": 1794483423579,
+   "seconds": 447
+  },
+  {
+   "prompt": 3,
+   "first_line": "Much better, but two things.",
+   "chars": 1203,
+   "model_calls": 28,
+   "tool_calls": 31,
+   "tool_errors": 3,
+   "input": 9038,
+   "cache_read": 1688405,
+   "output": 4473,
+   "reasoning": 4889,
+   "cost": 0.02247,
+   "context_at_end": 65005,
+   "started": 1794483539704,
+   "ended": 1794483836747,
+   "seconds": 297
+  },
+  {
+   "prompt": 4,
+   "first_line": "Good. That checks out on our side too: we regenerated site/index.html from src/index.html and got the identica",
+   "chars": 697,
+   "model_calls": 8,
+   "tool_calls": 14,
+   "tool_errors": 0,
+   "input": 5731,
+   "cache_read": 544225,
+   "output": 2397,
+   "reasoning": 105,
+   "cost": 0.00727,
+   "context_at_end": 70712,
+   "started": 1794483955178,
+   "ended": 1794484031841,
+   "seconds": 77
+  }
+ ]
+}

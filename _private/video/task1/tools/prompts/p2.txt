@@ -1,0 +1,10 @@
+Thanks. The checker is happy and the content is right. But we opened the page on a laptop and on a phone, and it still has problems the checker doesn't see:
+
+1. Night mode: the small pink labels (for example "INTERESTS" and the lines above the names) are hard to read on the dark cards. All text needs enough contrast in both modes, at least 4.5:1.
+2. Reload the page while in night mode: the button still says "Toggle day / night" instead of "Switch to day mode". The label must always match the current mode.
+3. Desktop layout: with five cards in two columns, Gagan sits alone next to a hole, and Sarpesh's and Namit's cards end in empty white space. Find a layout that looks balanced with five people.
+4. Some text is tiny: the labels and the interest chips are around 10-11 px. Nothing should be smaller than 12 px, and it has to stay readable on a phone.
+5. Gagan's picture was missing in a full-page screenshot. The pictures are embedded anyway, so they should not be lazy-loaded.
+6. We asked for small interactive touches, and the toggle is the only thing you can click. Add two or three fun ones that use our real content, for example a "hot take roulette" button that shows a random hot take with the name of who said it, or a "who said it?" mini quiz built from our hot takes. No new facts about us.
+
+Then run the checker again.

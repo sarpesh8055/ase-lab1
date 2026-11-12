@@ -1,0 +1,8 @@
+Good. That checks out on our side too: we regenerated site/index.html from src/index.html and got the identical file.
+
+One content problem is left. We asked for everything from the profiles in our own words, but the interests were shortened into chips and lost details:
+- Ranjith: "sorting recyclables on a conveyor belt" and "with LLM-written reward functions" are gone.
+- Sarpesh: "Exploring how AI tools can speed up engineering work" became "AI for engineering".
+- Soumya: the whole sentence about enhancing DevOps tools and workflows with AI is gone.
+
+Show everyone's interests in full, exactly as written in content/*.md. Edit src/index.html, regenerate site/index.html, and run the checker.

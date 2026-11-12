@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab 1 video slides, parts 1-3</title>
+<link rel="stylesheet" href="deck.css">
+</head>
+<body data-group="[[group_plain]]">
+
+<!-- ===================== 1 INTRO ===================== -->
+<section class="slide" id="s01" data-part="1">
+  <div class="row grow" style="align-items:center; gap:56px">
+    <div class="col" style="flex:0 0 800px; gap:14px">
+      <div style="font-size:25px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase">Agentic Software Engineering · WS 2026/27 · Lab 1</div>
+      <h1 style="font-size:78px">From using agents<br>to building them</h1>
+      <div class="big" style="color:var(--blue); margin:6px 0 30px">[[group]]</div>
+      <div class="row" style="gap:18px">
+        <div style="text-align:center"><img class="face" style="width:138px;height:138px" src="../../../../task1_opencode/content/images/gagan.jpeg" alt=""><div style="font-size:26px;font-weight:600;margin-top:8px">Gagan</div></div>
+        <div style="text-align:center"><img class="face" style="width:138px;height:138px" src="../../../../task1_opencode/content/images/namit.jpg" alt=""><div style="font-size:26px;font-weight:600;margin-top:8px">Namit</div></div>
+        <div style="text-align:center"><img class="face" style="width:138px;height:138px" src="../../../../task1_opencode/content/images/ranjith.png" alt=""><div style="font-size:26px;font-weight:600;margin-top:8px">Ranjith</div></div>
+        <div style="text-align:center"><img class="face" style="width:138px;height:138px" src="../../../../task1_opencode/content/images/sarpesh.jpg" alt=""><div style="font-size:26px;font-weight:600;margin-top:8px">Sarpesh</div></div>
+        <div style="text-align:center"><img class="face" style="width:138px;height:138px" src="../../../../task1_opencode/content/images/soumya.png" alt=""><div style="font-size:26px;font-weight:600;margin-top:8px">Soumya</div></div>
+      </div>
+    </div>
+    <div class="col" style="flex:1; gap:0">
+      <div class="shot" style="height:565px" data-clip="../../task1/site_tour_desktop.mp4" data-ss="1" data-crop="1384:820:0:32"><img src="../../task1/screenshots/desktop_day_cards.png" alt=""></div>
+      <div class="cap">Our team website, built by a coding agent in Task 1</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 2 TASK 1 ===================== -->
+<section class="slide" id="s02" data-part="2">
+  <h1>The website OpenCode built for us</h1>
+  <p class="sub">We wrote no HTML, CSS or JavaScript ourselves. OpenCode with GPT-6 Luna built it in two sessions, both exported.</p>
+  <div class="row grow" style="gap:24px">
+    <div class="col" style="flex:0 0 610px; gap:8px">
+      <div class="shot" style="height:352px"><img src="../../task1/screenshots/desktop_day_cards.png" alt=""></div>
+      <div class="cap" style="margin:0 0 6px">Desktop, day mode</div>
+      <div class="shot" style="height:352px"><img src="../../task1/screenshots/desktop_night_cards.png" alt=""></div>
+      <div class="cap" style="margin:0">Desktop, night mode</div>
+    </div>
+    <div class="col" style="flex:0 0 350px; gap:8px">
+      <div class="shot" style="height:742px"><img src="../../task1/screenshots/phone_day_cards.png" alt=""></div>
+      <div class="cap" style="margin:0">Phone, day mode</div>
+    </div>
+    <div class="col" style="flex:0 0 350px; gap:8px">
+      <div class="shot" style="height:742px"><img src="../../task1/screenshots/phone_night_cards.png" alt=""></div>
+      <div class="cap" style="margin:0">Phone, night mode</div>
+    </div>
+    <div class="col" style="flex:1; gap:16px">
+      <div class="card"><div class="big">5</div><p style="margin-top:8px">members, each with picture and full profile</p></div>
+      <div class="card"><div class="big">1</div><p style="margin-top:8px">standalone file, 620 KB, nothing loaded from the internet</p></div>
+      <div class="card"><div class="big">7 / 7</div><p style="margin-top:8px">checks passed (<code>check_site.py</code>). Also on the page: our shared view on AI, a day/night switch, two small games</p></div>
+   </div>
+  </div>
+</section>
+
+<section class="slide" id="s03" data-part="2">
+  <h1>Session 02 in numbers</h1>
+  <p class="sub">Every model call re-sends the whole conversation, so 71 thousand tokens became 4.1 million sent.</p>
+  <div class="row" style="gap:18px; margin-bottom:20px">
+    <div class="card kpi"><div class="big">4</div><div>prompts from us</div></div>
+    <div class="card kpi"><div class="big">81</div><div>model calls</div></div>
+    <div class="card kpi"><div class="big">103</div><div>tool calls (7 failed)</div></div>
+    <div class="card kpi"><div class="big">4.1M</div><div>tokens sent, 98% cached</div></div>
+    <div class="card kpi"><div class="big">$0.07</div><div>total cost</div></div>
+    <div class="card kpi"><div class="big">22 min</div><div>start to finish</div></div>
+  </div>
+  <div class="card" style="padding:18px 20px 8px">
+    <h2 style="font-size:26px; margin:0 0 4px 8px">Tokens sent to the model on each call (new input + cached input)</h2>
+    <img src="../assets/context_task1.png" alt="" style="display:block; width:1716px">
+  </div>
+  <p class="note">Session 02: 70,952 new input tokens, 4,036,054 cached, 22,824 output, 22,146 reasoning. Cached input costs a tenth of new input.
+  &nbsp;·&nbsp; Session 01 (first version, one member): 2 prompts, 11 tool calls, [[s01_stats]].</p>
+</section>
+
+<section class="slide" id="s04" data-part="2">
+  <h1>It reads on its own, but asks before it changes anything</h1>
+  <p class="sub">The model only proposes. The agent program runs the edit or the command, and only after a yes.</p>
+  <div class="row" style="gap:28px">
+    <div style="flex:1">
+      <div class="shot" style="height:500px"><img src="../assets/crop_permission.png" alt=""></div>
+      <div class="cap"><b>Asking first:</b> "Permission required: Shell command" before it runs the embed script</div>
+    </div>
+    <div style="flex:1">
+      <div class="shot" style="height:500px"><img src="../assets/crop_reject.png" alt=""></div>
+      <div class="cap"><b>Rejected:</b> it wanted to rewrite <code>embed_images.py</code>, a script the course gave us</div>
+    </div>
+  </div>
+  <div class="row" style="gap:18px; margin-top:22px">
+    <div class="card kpi"><div class="big">43</div><div>actions without asking: 20 file reads, 12 searches, 11 to-do updates</div></div>
+    <div class="card kpi"><div class="big">58</div><div>permission questions: 20 edits, 38 commands</div></div>
+    <div class="card kpi"><div class="big">1</div><div>rejected, with the reason sent back to the agent</div></div>
+  </div>
+</section>
+
+<section class="slide" id="s05" data-part="2">
+  <h1>Where it went wrong, and how we steered it back</h1>
+  <div class="row" style="gap:28px; margin-top:14px">
+    <div style="flex:1">
+      <div class="shot" style="height:540px"><img src="../assets/crop_patch_failed.png" alt=""></div>
+      <div class="cap"><b>"Patch failed":</b> the line it wanted to change holds 200 KB of picture data</div>
+    </div>
+    <div style="flex:1">
+      <div class="shot" style="height:540px" data-clip="../../task1/clips/clip_4_false_claim_then_our_correction.mp4" data-ss="0" data-crop="980:612:0:140"><img src="../assets/crop_false_claim.png" alt=""></div>
+      <div class="cap"><b>"Removed lazy loading"</b> was reported, but it was still on all five pictures. Below it: our correction</div>
+    </div>
+  </div>
+  <div class="row" style="gap:18px; margin-top:22px">
+    <div class="card" style="flex:1"><div class="step"><span class="num">1</span><p><b>Cause.</b> The pictures were embedded as base64 inside the file the agent kept editing: 600 KB.</p></div></div>
+    <div class="card" style="flex:1.25"><div class="step"><span class="num">2</span><p><b>What happened.</b> Search failed three times, the patch failed, it added a JavaScript workaround, and its own check looked for the wrong text.</p></div></div>
+    <div class="card" style="flex:1.25"><div class="step"><span class="num">3</span><p><b>Our prompt.</b> Keep a small source file with <code>{{image:…}}</code> placeholders and let the embed script build the page. Every later edit worked.</p></div></div>
+  </div>
+</section>
+
+<!-- ===================== 3 TASK 2 ===================== -->
+<section class="slide" id="s06" data-part="3">
+  <h1>Our own agent: a loop where the model picks the next action</h1>
+  <p class="sub">Plain Python, no framework. One JSON object per step. Our code runs the action and reports back.</p>
+  <svg viewBox="0 0 1760 700" width="1760" height="700" style="display:block" font-family="Segoe UI, sans-serif">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+      <marker id="arrowb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    </defs>
+    <g fill="#fcfcfb" stroke="#c3c2b7" stroke-width="2">
+      <rect x="2" y="50" width="250" height="110" rx="14"/>
+      <rect x="330" y="50" width="250" height="110" rx="14" fill="#e4effc" stroke="#2a78d6"/>
+      <rect x="660" y="50" width="390" height="110" rx="14"/>
+      <rect x="1130" y="50" width="240" height="110" rx="14"/>
+      <rect x="1450" y="50" width="308" height="110" rx="14" fill="#fbe6e6" stroke="#e9b5b5"/>
+      <rect x="2" y="270" width="410" height="150" rx="14"/>
+      <rect x="450" y="270" width="410" height="150" rx="14"/>
+      <rect x="898" y="270" width="410" height="150" rx="14"/>
+      <rect x="1346" y="270" width="412" height="150" rx="14"/>
+      <rect x="1346" y="540" width="412" height="130" rx="14" fill="#fff3cd" stroke="#e6cf85"/>
+      <rect x="2" y="540" width="390" height="130" rx="14" fill="#e3f4e3" stroke="#a9d9a9"/>
+    </g>
+    <g fill="none" stroke="#52514e" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M252,105 H322"/>
+      <path d="M580,105 H652"/>
+      <path d="M1050,105 H1122"/>
+      <path d="M1370,105 H1442"/>
+      <path d="M1604,50 V16 H455 V42"/>
+      <path d="M1250,160 V225 H207 V262"/>
+      <path d="M655,225 V262"/>
+      <path d="M1103,225 V262"/>
+      <path d="M1250,225 H1552 V262"/>
+      <path d="M1552,420 V532"/>
+    </g>
+    <g fill="none" stroke="#2a78d6" stroke-width="3" marker-end="url(#arrowb)">
+      <path d="M1103,420 V480 H431 V200 H455 V168"/>
+    </g>
+    <g fill="none" stroke="#2a78d6" stroke-width="3">
+      <path d="M207,420 V480 H431"/>
+      <path d="M655,420 V480"/>
+      <path d="M1346,605 H431 V480"/>
+    </g>
+    <g font-size="27" font-weight="700" fill="#0b0b0b" text-anchor="middle">
+      <text x="127" y="98">Task</text>
+      <text x="455" y="98">Model</text>
+      <text x="855" y="98">Reply: one JSON object</text>
+      <text x="1250" y="98">Parser</text>
+      <text x="1604" y="98">Invalid reply</text>
+      <text x="207" y="318">search_style_guide</text>
+      <text x="655" y="318">read_profiles</text>
+      <text x="1103" y="318">write_site</text>
+      <text x="1552" y="318">finish</text>
+      <text x="1552" y="590">Human feedback</text>
+      <text x="197" y="590">The model decides</text>
+    </g>
+    <g font-size="22" fill="#52514e" text-anchor="middle">
+      <text x="127" y="132">requirements</text>
+      <text x="455" y="132">GPT-6 Luna</text>
+      <text x="855" y="132" font-family="Cascadia Mono, Consolas, monospace" font-size="21">{"thought", "action", "args"}</text>
+      <text x="1250" y="132">parse_reply</text>
+      <text x="1604" y="132">error text, counts as a step</text>
+      <text x="207" y="354">RAG over the style guide:</text>
+      <text x="207" y="384">66 chunks, top 5, max 1,000 tokens</text>
+      <text x="655" y="354">the five profiles and the</text>
+      <text x="655" y="384">list of picture files</text>
+      <text x="1103" y="354">embed pictures, save,</text>
+      <text x="1103" y="384">run the checker (25 checks)</text>
+      <text x="1552" y="354">accepted only if the</text>
+      <text x="1552" y="384">last check passed</text>
+      <text x="1552" y="624">text = next round · empty = end</text>
+      <text x="197" y="624">what to look up, when to write,</text>
+      <text x="197" y="652">how to fix a failed check</text>
+    </g>
+    <g font-size="21" fill="#104281">
+      <text x="452" y="514">OBSERVATION (step N): the result as text. It is added to the conversation, and everything is sent again</text>
+      <text x="452" y="594">feedback becomes a new user message, and the next round starts (25 steps max per round)</text>
+    </g>
+    <text x="1000" y="12" font-size="20" fill="#898781" text-anchor="middle">error goes back to the model</text>
+  </svg>
+</section>
+
+<section class="slide" id="s07" data-part="3">
+  <h1>One real step, annotated (final run, step 12)</h1>
+  <p class="sub">The model noticed a rule it had not followed and decided to look up more. No pipeline told it to.</p>
+  <div class="row grow" style="gap:22px">
+    <div class="col" style="flex:1.08; gap:12px">
+      <div class="step"><span class="num">1</span><p style="font-size:27px; font-weight:700; margin-top:5px">What we sent</p></div>
+      <div class="cap" style="margin:0">25 messages, 12,039 tokens (11,572 from the cache). The last one:</div>
+<pre style="flex:1; font-size:19.5px">OBSERVATION (step 11):
+Style guide results for "Required order of team
+member cards and rules for badges on member
+cards" (5 chunks):
+
+<span class="k">[SG-30] Member cards</span>
+<span class="m">Status: ACTIVE (version 2) | Category: Components</span>
+- Cards are ordered alphabetically by first name.
+<span class="m">…</span>
+<span class="k">[SG-31] Hot take badge</span>
+<span class="m">Status: ACTIVE | Category: Components</span>
+- The badge is an element with the class
+  `hot-take` inside the member card.
+- <span class="g">The text starts with the fire emoji 🔥.</span>
+- Maximum text length: 140 characters
+<span class="m">…</span></pre>
+    </div>
+    <div class="col" style="flex:1; gap:12px">
+      <div class="step"><span class="num">2</span><p style="font-size:27px; font-weight:700; margin-top:5px">What came back</p></div>
+      <div class="cap" style="margin:0">217 output tokens, 4.7 seconds, $0.0003</div>
+<pre style="flex:1; font-size:19.5px">{
+ <span class="k">"thought"</span>: "The cards are already
+   alphabetized, but the guide requires
+   the hot take to be a short,
+   fire-prefixed magenta badge. I'll
+   check how it defines the bio and
+   hot-take wording before revising
+   card content.",
+ <span class="k">"action"</span>: <span class="g">"search_style_guide"</span>,
+ <span class="k">"args"</span>: {
+   "query": "Bio writing requirements
+     for member cards and hot take
+     wording length limit and format"
+ }
+}</pre>
+    </div>
+    <div class="col" style="flex:1; gap:12px">
+      <div class="step"><span class="num">3</span><p style="font-size:27px; font-weight:700; margin-top:5px">What our code did</p></div>
+      <div class="card" style="flex:1">
+        <ol style="padding-left:28px">
+          <li><b>Parsed</b> the reply: valid JSON, known action, arguments fine</li>
+          <li><b>Embedded</b> the query and compared it with the 66 chunk vectors</li>
+          <li><b>Top 5:</b> SG-08 Writing member bios (0.83), SG-30, SG-32, SG-30, SG-31</li>
+          <li><b>384 tokens</b> of style guide text (limit 1,000), sent back as <code>OBSERVATION (step 12)</code></li>
+          <li><b>Next step:</b> the model rewrote the page. Checker: 25 of 25</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="s08" data-part="3">
+  <h1>Retrieval choices, and what happens when the model misbehaves</h1>
+  <div class="row grow" style="gap:28px; margin-top:16px">
+    <div class="card" style="flex:1">
+      <h2>Chunking, k, and how we checked retrieval</h2>
+      <ul>
+        <li><b>55 documents, 66 chunks.</b> Cut at the <code>##</code> headings, no overlap: a rule is never cut in half</li>
+        <li><b>Every chunk starts with its title and status</b>, for example <code>[SG-13] Night mode palette (version 2) · Status: ACTIVE</code>, so the model sees if a rule is deprecated</li>
+        <li><b>Our check: 18 questions we wrote ourselves.</b> Right document at rank 1: 14 of 18. In the top 5: 18 of 18</li>
+        <li><b>So k = 5.</b> Old versions of a rule look almost the same and often rank first</li>
+        <li><b>A search returned 371 to 613 tokens</b> of style guide text in the final run. The limit is 1,000</li>
+      </ul>
+    </div>
+    <div class="card" style="flex:1">
+      <h2>Safety nets in the loop</h2>
+      <table class="small">
+        <tr><th class="l">If the model …</th><th class="l">… our code</th></tr>
+        <tr><td>sends broken JSON or an unknown action</td><td class="l">sends the error back as an observation. It counts as a step</td></tr>
+        <tr><td>writes base64 itself, or names a picture that does not exist</td><td class="l">rejects it and saves nothing</td></tr>
+        <tr><td>repeats a search</td><td class="l">answers "you already searched this"</td></tr>
+        <tr><td>calls <code>finish</code> before the checks pass</td><td class="l">rejects it and lists the failing checks</td></tr>
+        <tr><td>never finishes</td><td class="l">stops the run after 25 steps per round</td></tr>
+      </table>
+      <p class="note">In the final run none of these fired: 14 steps, 0 protocol errors.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="s09" data-part="3">
+  <h1>Final run: 25 of 25 checks, and two rules it still got wrong</h1>
+  <div class="row grow" style="gap:28px; margin-top:14px">
+    <div class="col" style="flex:0 0 900px; gap:16px">
+      <div class="row" style="gap:14px">
+        <div class="card kpi" style="padding:18px 20px"><div class="big" style="font-size:54px">14</div><div>steps, 9 of them searches</div></div>
+        <div class="card kpi" style="padding:18px 20px"><div class="big" style="font-size:54px">25 / 25</div><div>at the first write, all five members</div></div>
+        <div class="card kpi" style="padding:18px 20px"><div class="big" style="font-size:54px">$0.009</div><div>95,862 + 10,915 tokens</div></div>
+      </div>
+      <div class="card" style="padding:16px 18px 6px">
+        <h2 style="font-size:25px; margin:0 0 0 6px">Tokens sent to the model at each step</h2>
+        <img src="../assets/context_task2.png" alt="" style="display:block; width:860px">
+      </div>
+      <p class="note" style="margin-top:0">Each search adds about 600 tokens and everything is sent again. We keep only the newest page in the history. At 100 steps we would also have to summarise old search results.</p>
+    </div>
+    <div class="card" style="flex:1">
+      <h2>What it got wrong, and why</h2>
+      <p><span class="tag no">✗ round 1</span> &nbsp;passed 25 of 25, but: no bio, and the badge has no fire emoji</p>
+<pre style="font-size:19px">&lt;div class="hot-take"&gt;&lt;strong&gt;Hot take&lt;/strong&gt;
+  AI is making us lose our edge: …&lt;/div&gt;</pre>
+      <p style="margin-top:14px"><span class="tag ok">✓ after our feedback</span> &nbsp;it searched SG-30, SG-31 and SG-08, then fixed both</p>
+<pre style="font-size:19px">&lt;p class="bio"&gt;Namit is a fifth-semester M.Sc.
+  Computer Science student who … <span class="m">(91 words)</span>&lt;/p&gt;
+&lt;div class="hot-take"&gt;<span class="g">🔥</span> AI is making us lose
+  our edge: …&lt;/div&gt;</pre>
+      <p style="margin-top:14px"><b>Why:</b> the checker only tests that a badge exists. The agent never searched for these two rules, so it did not know them. It only knows what it retrieved.</p>
+    </div>
+  </div>
+</section>
+
+<script src="deck.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "_how_to": "Fill in the values that are empty or start with TODO, then run:  uv run --no-project --with playwright python tools/build_video.py   An empty value shows as an empty box on the slide, a TODO value as a yellow box. While any is open, the output files start with DRAFT_.",
+  "group": "Group 21",
+  "file_prefix": "group-21",
+  "members": ["Gagan", "Namit", "Ranjith", "Sarpesh", "Soumya"],
+  "session01_tokens_and_cost": "TODO Sarpesh: tokens and cost",
+  "ai_tools_tasks_2_to_4": "TODO which AI assistants were used for the first version of Tasks 2-4, and for what",
+  "who_did_what": {
+    "Gagan": "",
+    "Namit": "",
+    "Ranjith": "",
+    "Sarpesh": "",
+    "Soumya": ""
+  },
+  "_who_did_what_suggestions_not_shown": {
+    "Namit": "Task 1 session 02 for all five members (through Claude Code), checked the results of Tasks 2-4 against the scripts, final Task 2 run, video slides",
+    "Sarpesh": "First version of all four tasks: Task 1 session 01, the Task 2 agent, the Task 3 experiments, the Task 4 tool layer"
+  },
+  "speakers": {
+    "1": "Namit",
+    "2": "Namit",
+    "3": "Gagan",
+    "4": "Ranjith",
+    "5": "Sarpesh",
+    "6": "Soumya"
+  },
+  "words_per_second": 2.4,
+  "pause_per_slide_seconds": 1.2
+}
