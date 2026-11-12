@@ -272,6 +272,8 @@ def write_texts(cfg: dict, board: dict, rows: list, total: float, names: dict, t
     timeline = {"total_seconds": total, "parts": [], "slides": [
         {k: row[k] for k in ("id", "n", "part", "start", "end", "seconds", "words", "speaker", "title")} for row in rows]}
     md = ["# Voiceover script, Lab 1 video", "",
+          "> **This file is generated.** `tools/build_video.py` writes it again on every build, so anything typed in here is lost.",
+          "> To change a sentence, edit `storyboard.json`. To change names or facts, edit `team.json`. Then build again.", "",
           f"Video length: **{clock(total)}** ({total:.0f} s). The limit is 10:00, and nothing after it is graded.",
           f"Speaking pace assumed: {float(cfg['words_per_second']) * 60:.0f} words per minute, plus "
           f"{cfg['pause_per_slide_seconds']} s of breathing room on every slide.",
@@ -305,6 +307,9 @@ def main() -> None:
     ap.add_argument("--skip-guide", action="store_true", help="do not build the recording guide")
     ap.add_argument("--plan-only", action="store_true", help="only print the timing")
     ap.add_argument("--part-guides-only", action="store_true", help="only cut the per-speaker recording clips")
+    ap.add_argument("--texts-only", action="store_true",
+                    help="only rewrite the script, the subtitles and the timeline (no video work; use it after "
+                         "changing a note, not after changing a sentence, because sentences change the slide times)")
     a = ap.parse_args()
     cfg = json.loads((FINAL / "team.json").read_text(encoding="utf-8"))
     board = json.loads((FINAL / "storyboard.json").read_text(encoding="utf-8"))
@@ -329,21 +334,29 @@ def main() -> None:
     names = {"clean": OUT / f"{prefix}_lab1_video_NO_VOICE.mp4", "guide": OUT / f"{prefix}_lab1_recording_guide.mp4",
              "srt": OUT / f"{prefix}_lab1_video.srt", "script": FINAL / "VOICEOVER_SCRIPT.md"}
     part_clips = []
-    if a.part_guides_only:
+    if a.texts_only:
+        write_texts(cfg, board, rows, total, names, todos)
+    elif a.part_guides_only:
         part_clips = make_part_guides(rows, names["guide"], prefix)
     else:
-        # remove what this script made last time (never a video that already has voices on it),
-        # so DRAFT_ files do not stay behind once team.json is complete
-        for old in [*OUT.glob("*_lab1_video_NO_VOICE.mp4"), *OUT.glob("*_lab1_recording_guide.mp4"),
-                    *OUT.glob("*_record_part*.mp4"), *OUT.glob("*_lab1_video.srt")]:
-            old.unlink()
         if a.skip_render:
             clips = json.loads((BUILD / "clips.json").read_text(encoding="utf-8"))
         else:
             clips = render_slides(cfg, board["scenes"])
             (BUILD / "clips.json").write_text(json.dumps(clips, indent=1), encoding="utf-8")
         make_segments(rows, clips)
-        join(rows, names["clean"])
+        fresh = BUILD / "_new_video.mp4"
+        join(rows, fresh)
+        # Only now, with the new video finished, remove what this script made last time, so a build
+        # that fails (no Edge, no ffmpeg) leaves the old files alone. A video that already has voices
+        # on it is never touched. Removing also clears DRAFT_ names once team.json is complete.
+        for old in [*OUT.glob("*_lab1_video_NO_VOICE.mp4"), *OUT.glob("*_lab1_recording_guide.mp4"),
+                    *OUT.glob("*_record_part*.mp4"), *OUT.glob("*_lab1_video.srt")]:
+            try:
+                old.unlink()
+            except PermissionError:
+                raise SystemExit(f"Cannot replace {old.name}: it is open in another program. Close it and build again.")
+        fresh.replace(names["clean"])
         write_texts(cfg, board, rows, total, names, todos)
         if not a.skip_guide:
             make_guide(rows, names["clean"], names["guide"])

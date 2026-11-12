@@ -2,6 +2,7 @@
 build/seg_*.mp4
 build/*.ass
 build/segments.txt
+build/_new_video.mp4
 deck/_render_*.html
 
 # Voice recordings are personal. Share them some other way, or remove this line on purpose.

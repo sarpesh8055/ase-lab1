@@ -26,7 +26,7 @@ import urllib.request
 from pathlib import Path
 
 # ---- approval policy (only used with --auto) --------------------------------
-TASK_DIR = Path(r"C:\Users\Namit\Desktop\Agentic SWE Labs\ase-lab1\task1_opencode")
+TASK_DIR = Path(__file__).resolve().parents[4] / "task1_opencode"  # <repo>/_private/video/task1/tools/oc.py
 REPO_DIR = TASK_DIR.parent
 # The agent may create/change files anywhere in the task folder, except the
 # team's own content, the logs/screenshots and the course's scripts ...

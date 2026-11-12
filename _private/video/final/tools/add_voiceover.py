@@ -55,7 +55,11 @@ def main() -> None:
     timeline = json.loads((FINAL / "build" / "timeline.json").read_text(encoding="utf-8"))
     cfg = json.loads((FINAL / "team.json").read_text(encoding="utf-8"))
     total = timeline["total_seconds"]
-    silent = Path(a.video) if a.video else max((FINAL / "out").glob("*_NO_VOICE.mp4"), key=lambda p: p.stat().st_mtime)
+    candidates = sorted((FINAL / "out").glob("*_NO_VOICE.mp4"), key=lambda p: p.stat().st_mtime)
+    if not a.video and not candidates:
+        raise SystemExit("No silent video found in out/. Build it first (tools/build_video.py), or get it back with: "
+                         "git restore _private/video/final/out")
+    silent = Path(a.video) if a.video else candidates[-1]
     draft = silent.name.startswith("DRAFT_")
     out = Path(a.out) if a.out else FINAL / "out" / f"{'DRAFT_' if draft else ''}{cfg['file_prefix']}_lab1_video.mp4"
     folder = Path(a.voice)

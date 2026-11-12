@@ -1,4 +1,4 @@
-# Task 1 video material (private: not in git, not in the ZIP)
+# Task 1 video material (shared in git, not in the ZIP)
 
 Made on Nov 12 from the real session 02. Every recording shows one window only, so nothing else from the
 screen is in it. No sound. Size: 1382 × 816 (the lab asks for at least 720p).

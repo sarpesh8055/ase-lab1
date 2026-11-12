@@ -1,5 +1,8 @@
 # Voiceover script, Lab 1 video
 
+> **This file is generated.** `tools/build_video.py` writes it again on every build, so anything typed in here is lost.
+> To change a sentence, edit `storyboard.json`. To change names or facts, edit `team.json`. Then build again.
+
 Video length: **9:42** (582 s). The limit is 10:00, and nothing after it is graded.
 Speaking pace assumed: 144 words per minute, plus 1.2 s of breathing room on every slide.
 Words in total: 1323.
@@ -90,6 +93,8 @@ The speaker names come from `team.json` (`speakers`). Change them there; the sli
 
 > Our best system gets 13 of 50 answers wrong. Every failure starts in retrieval, none in generation. Ten are multi-hop questions where the second document is missing. In version questions, forum threads push the release notes out of the top five. We would deploy the hybrid without HyDE: same correctness, 35 times faster. The next step is a second retrieval round for multi-hop questions.
 
+*Before you record this:* '35 times faster' compares about 180 ms with one HyDE call of about 6.3 s (Task 3 README). In task3_rag/results/summary.json the R5 median is 1.8 s, because the HyDE passages were generated 4 at a time. Measured that way it is about 10 times.
+
 ## 5. Task 4: tools · Sarpesh · 6:03 to 8:44
 
 **Slide 14: The tools: read-only, execute, write** · 6:03 to 6:35 · 32 s · 73 words
@@ -122,4 +127,4 @@ The speaker names come from `team.json` (`speakers`). Change them there; the sli
 
 > AI usage: OpenCode with GPT-6 Luna wrote the whole Task 1 website. In the second session, Claude Code wrote and sent our prompts and answered the permission questions. It also checked our results and prepared these slides. [Say which assistants were used for the first version of Tasks 2 to 4.] [Who did what: one short sentence per person, as on the slide.] Thank you for watching.
 
-*Before you record this:* The two parts in square brackets are yours to word. They must match what is on the slide, which comes from team.json. You have 36 seconds for this slide, about 85 words in total.
+*Before you record this:* The two parts in square brackets are yours to word. Write your wording into the 'say' text of s20 in storyboard.json, not into the generated script. It must match what is on the slide, which comes from team.json. You have 36 seconds for this slide, about 85 words in total.

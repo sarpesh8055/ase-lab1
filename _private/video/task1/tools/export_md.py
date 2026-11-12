@@ -78,7 +78,10 @@ def main() -> None:
             current["context_at_end"] = tok.get("input", 0) + cache.get("read", 0)
             current["ended"] = (msg["info"].get("time") or {}).get("completed") or current["ended"]
 
-    out_md.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    # Tool output captured on Windows contains \r\n. Normalise it and write with plain \n,
+    # otherwise Python's text mode turns it into \r\r\n and viewers show doubled blank lines.
+    text = ("\n".join(lines).rstrip() + "\n").replace("\r\n", "\n").replace("\r", "\n")
+    out_md.write_text(text, encoding="utf-8", newline="\n")
 
     for p in prompts:
         p["seconds"] = round((p["ended"] - p["started"]) / 1000) if p["ended"] else None

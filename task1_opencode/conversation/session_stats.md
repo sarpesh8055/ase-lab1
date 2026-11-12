@@ -39,3 +39,6 @@ The 7 failed tool calls: 4 searches (3 because a line with an embedded picture w
 python embed_images.py src/index.html --images content/images --out site/index.html
 python check_site.py site/index.html --content content
 ```
+
+If the embed script ends with a `UnicodeEncodeError` on a Windows console, the file has still been written;
+it is only the script's last print that fails. `set PYTHONIOENCODING=utf-8` avoids the message.

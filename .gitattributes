@@ -1,0 +1,5 @@
+# Video material is shared in git but is not part of the PANDA ZIP.
+# `git archive` leaves out everything marked export-ignore, e.g.:
+#   git archive --format=zip --prefix=group-21/ -o ../group-21_lab1.zip HEAD
+/_private export-ignore
+/.gitattributes export-ignore

@@ -1,6 +1,17 @@
 # The Lab 1 video: what is here and how to finish it
 
-This folder is private (not in git, not in the ZIP). The video is uploaded to PANDA on its own.
+This folder is shared in git so the whole group has it, but it is **not part of the ZIP**: the video is uploaded to
+PANDA on its own. Make the ZIP with `git archive`, which leaves `_private/` out (see `.gitattributes` in the repo root):
+
+```
+git archive --format=zip --prefix=group-21/ -o ../group-21_lab1.zip HEAD
+```
+
+**One person builds and commits** (Namit). A build rewrites the slide pictures and the videos, about 50 MB of binary
+files, and two people doing that produce a conflict git cannot merge. Everyone else: send your text, or change
+`team.json` / `storyboard.json` and let that one person build.
+
+The build needs Windows with Microsoft Edge, `uv`, and `ffmpeg` (with libx264 and libass) on the PATH.
 
 ## What exists
 

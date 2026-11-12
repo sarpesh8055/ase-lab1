@@ -39,6 +39,7 @@
      "check": "The file task3_rag/results/judge_check_R5_hybrid_hyde.md says its ten verdicts were drafted with an AI assistant and that every group member must re-check them. Do that before saying 'we checked'. If your count is not 8 of 10, change the number here and on the slide (deck/slides_b.html).",
      "say": "End to end, both setups answer 75 percent of 50 questions correctly. Giving the model the whole document instead of one chunk raised this from 66 to 75. Faithfulness is 97 percent: it almost never invents facts. We checked ten judge decisions against the documents and agree with eight. The judge is reliable for single facts, but inconsistent with partial answers."},
     {"id": "s13", "part": 4, "deck": "slides_b.html", "title": "Failure analysis and recommendation",
+     "check": "'35 times faster' compares about 180 ms with one HyDE call of about 6.3 s (Task 3 README). In task3_rag/results/summary.json the R5 median is 1.8 s, because the HyDE passages were generated 4 at a time. Measured that way it is about 10 times.",
      "say": "Our best system gets 13 of 50 answers wrong. Every failure starts in retrieval, none in generation. Ten are multi-hop questions where the second document is missing. In version questions, forum threads push the release notes out of the top five. We would deploy the hybrid without HyDE: same correctness, 35 times faster. The next step is a second retrieval round for multi-hop questions."},
 
     {"id": "s14", "part": 5, "deck": "slides_b.html", "title": "The tools: read-only, execute, write",
@@ -55,7 +56,7 @@
     {"id": "s19", "part": 6, "deck": "slides_b.html", "title": "Lessons learned",
      "say": "Three lessons. One: a green check is not a correct result. OpenCode reported a fix that was not there, and our own agent passed 25 checks with two broken rules. Two: an agent only knows what it retrieved. Three: safety belongs in the tool layer, not in the prompt."},
     {"id": "s20", "part": 6, "deck": "slides_b.html", "title": "AI usage statement, who did what", "seconds": 36,
-     "check": "The two parts in square brackets are yours to word. They must match what is on the slide, which comes from team.json. You have 36 seconds for this slide, about 85 words in total.",
+     "check": "The two parts in square brackets are yours to word. Write your wording into the 'say' text of s20 in storyboard.json, not into the generated script. It must match what is on the slide, which comes from team.json. You have 36 seconds for this slide, about 85 words in total.",
      "say": "AI usage: OpenCode with GPT-6 Luna wrote the whole Task 1 website. In the second session, Claude Code wrote and sent our prompts and answered the permission questions. It also checked our results and prepared these slides. [Say which assistants were used for the first version of Tasks 2 to 4.] [Who did what: one short sentence per person, as on the slide.] Thank you for watching."}
   ]
 }
